@@ -7,10 +7,17 @@ settings:
 importers:
 
   .:
+    dependencies:
+      sst:
+        specifier: 3.9.10
+        version: 3.9.10
     devDependencies:
       '@changesets/cli':
         specifier: ^2.27.1
         version: 2.27.2
+      '@types/aws-lambda':
+        specifier: 8.10.147
+        version: 8.10.147
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -4584,6 +4591,10 @@ packages:
       '@types/estree': 1.0.6
     dev: true
 
+  /@types/aws-lambda@8.10.147:
+    resolution: {integrity: sha512-nD0Z9fNIZcxYX5Mai2CTmFD7wX7UldCkW2ezCF8D1T5hdiLsnTWDGRpfRYntU6VjTdLQjOvyszru7I1c1oCQew==}
+    dev: true
+
   /@types/babel__core@7.20.5:
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
     dependencies:
@@ -5445,6 +5456,10 @@ packages:
     dependencies:
       possible-typed-array-names: 1.0.0
     dev: true
+
+  /aws4fetch@1.0.20:
+    resolution: {integrity: sha512-/djoAN709iY65ETD6LKCtyyEI04XIBP5xVvfmNxsEP0uJB5tyaGBztSryRr4HqMStr9R06PisQE7m9zDTXKu6g==}
+    dev: false
 
   /axe-core@4.7.0:
     resolution: {integrity: sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==}
@@ -8358,6 +8373,14 @@ packages:
     resolution: {integrity: sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA==}
     dev: true
 
+  /jose@4.15.9:
+    resolution: {integrity: sha512-1vUQX+IdDMVPj4k8kOxgUqlcK518yluMuGZwqlr44FS1ppZB/5GWh4rZG89erpOBOJjU/OBsnCVFfapsRz6nEA==}
+    dev: false
+
+  /jose@5.2.3:
+    resolution: {integrity: sha512-KUXdbctm1uHVL8BYhnyHkgp3zDX5KW8ZhAKVFEfUbU2P8Alpzjb+48hHvjOdQIyPshoblhzsuqOwEEAbtHVirA==}
+    dev: false
+
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -8760,6 +8783,13 @@ packages:
     dependencies:
       yallist: 3.1.1
     dev: true
+
+  /lru-cache@6.0.0:
+    resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
+    engines: {node: '>=10'}
+    dependencies:
+      yallist: 4.0.0
+    dev: false
 
   /lucide-react@0.475.0(react@19.0.0):
     resolution: {integrity: sha512-NJzvVu1HwFVeZ+Gwq2q00KygM1aBhy/ZrhY9FsAgJtpB+E4R7uxRk9M2iKvHa6/vNxZydIB59htha4c2vvwvVg==}
@@ -9528,6 +9558,11 @@ packages:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
     engines: {node: '>=0.10.0'}
 
+  /object-hash@2.2.0:
+    resolution: {integrity: sha512-gScRMn0bS5fH+IuwyIFgnh9zBdo4DV+6GhygmWM9HyNJSgS0hScp1f5vjtm7oIIOiT9trXrShAkLFSc2IqKNgw==}
+    engines: {node: '>= 6'}
+    dev: false
+
   /object-inspect@1.13.1:
     resolution: {integrity: sha512-5qoj1RUiKOMsCCNLV1CBiPYE10sziTsnmNxkAI/rZhiD63CF7IqdFGC/XzjWjpSgLf0LxXX3bDFIh0E18f6UhQ==}
     dev: true
@@ -9597,6 +9632,11 @@ packages:
     resolution: {integrity: sha512-zuHHiGTYTA1sYJ/wZN+t5HKZaH23i4yI1HMwbuXm24Nid7Dv0KcuRlKoNKS9UNfAVSBlnGLcuQrnOKWOZoEGaw==}
     dev: true
 
+  /oidc-token-hash@5.1.0:
+    resolution: {integrity: sha512-y0W+X7Ppo7oZX6eovsRkuzcSM40Bicg2JEJkDJ4irIt1wsYAP5MLSNv+QAogO8xivMffw/9OvV3um1pxXgt1uA==}
+    engines: {node: ^10.13.0 || >=12.0.0}
+    dev: false
+
   /on-finished@2.4.1:
     resolution: {integrity: sha512-oVlzkg3ENAhCk2zdv7IJwd/QUD4z2RxRwpkcGY8psCVcCYZNq4wYnVWALHM+brtuJjePWiYF/ClmuDr8Ch5+kg==}
     engines: {node: '>= 0.8'}
@@ -9628,6 +9668,15 @@ packages:
     dependencies:
       mimic-fn: 4.0.0
     dev: true
+
+  /openid-client@5.6.4:
+    resolution: {integrity: sha512-T1h3B10BRPKfcObdBklX639tVz+xh34O7GjofqrqiAQdm7eHsQ00ih18x6wuJ/E6FxdtS2u3FmUGPDeEcMwzNA==}
+    dependencies:
+      jose: 4.15.9
+      lru-cache: 6.0.0
+      object-hash: 2.2.0
+      oidc-token-hash: 5.1.0
+    dev: false
 
   /optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -11454,6 +11503,61 @@ packages:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: true
 
+  /sst-darwin-arm64@3.9.10:
+    resolution: {integrity: sha512-X+fLAd7SbX+Al17NqAijFUke1ZkD5/l/Go8+vjxKWhDc2QvzmZu9Yk9csK4K7Y7iYt6F0RnjW5bFhBMlq6/P2g==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst-darwin-x64@3.9.10:
+    resolution: {integrity: sha512-hSJTjgsS5b70Jld+N2dmgFOej5oQYOsoFWvawuuqEFg2lirQOvczy+KKGlv+99ceAyONIRksCiOFu3gY3OOsbQ==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst-linux-arm64@3.9.10:
+    resolution: {integrity: sha512-CzwlaVbxNf3j9OU42MuvupcAfx+cQcJJBi4GU0aF738/nasOoGN+2Nz3+F4zYuAWqxRyIc6gjRs69X5Qx9k/0A==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst-linux-x64@3.9.10:
+    resolution: {integrity: sha512-4M6Jt7t6eUDFLjXfVcJhksDyNI1R6DYCG8p1ELl4Eu9QIEFrXBncUssY3UdIkjzOXBOUubmp1W7XkLYELs0DKw==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst-linux-x86@3.9.10:
+    resolution: {integrity: sha512-6KTIbnndKHH8UrpbuSHuOgLRDMbr8tkjoboa+O6Z68JDjNSIf+Qnkw92n6nROA4io+yPmcACtH5AfOK3oe0WhQ==}
+    cpu: [x86]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst@3.9.10:
+    resolution: {integrity: sha512-+BH2p6T12+kvPR5DbXZGtYPQfscXHmZ0NgMUIvfXIZxr8dhh9pcHv8Dzm4YEguJ5ZTudRTgkkQX0y3qJZPnBNA==}
+    hasBin: true
+    dependencies:
+      aws4fetch: 1.0.20
+      jose: 5.2.3
+      openid-client: 5.6.4
+    optionalDependencies:
+      sst-darwin-arm64: 3.9.10
+      sst-darwin-x64: 3.9.10
+      sst-linux-arm64: 3.9.10
+      sst-linux-x64: 3.9.10
+      sst-linux-x86: 3.9.10
+    dev: false
+
   /stable@0.1.8:
     resolution: {integrity: sha512-ji9qxRnOVfcuLDySj9qzhGSEFVobyt1kIOSkj1qZzYLzq7Tos/oUUWvotUPQLlrsidqsK6tBH89Bc9kL5zHA6w==}
     deprecated: 'Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility'
@@ -12605,7 +12709,6 @@ packages:
 
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-    dev: true
 
   /yaml@1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}

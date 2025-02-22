@@ -2,20 +2,24 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "clean": "turbo run clean && rm -rf node_modules",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
-    "version-packages": "changeset version",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "preview-storybook": "turbo run preview-storybook",
     "release": "turbo run build --filter=docs^... && changeset publish",
-    "preview-storybook": "turbo run preview-storybook"
+    "version-packages": "changeset version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "@types/aws-lambda": "8.10.147",
     "prettier": "^3.2.5",
     "turbo": "^2.4.2"
   },
   "packageManager": "pnpm@8.15.6",
-  "name": "design-system"
+  "name": "design-system",
+  "dependencies": {
+    "sst": "3.9.10"
+  }
 }

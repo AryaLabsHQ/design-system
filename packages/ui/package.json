@@ -11,18 +11,27 @@
     }
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "rollup -c",
+    "build:css": "pnpx @tailwindcss/cli -i ./src/styles/globals.css -o ./dist/styles/globals.css",
+    "dev": "rollup -c -w",
+    "dev:css": "pnpx @tailwindcss/cli -i ./src/styles/globals.css -o ./dist/styles/globals.css -w",
     "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo node_modules dist"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@tailwindcss/cli": "^4.0.8",
+    "@types/node": "22.13.5",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "eslint": "^8.57.0",
-    "tsup": "^8.0.2",
+    "glob": "^11.0.1",
+    "rollup": "^4.34.8",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "tailwindcss": "^4.0.8",
     "typescript": "5.5.4"
   },
   "dependencies": {

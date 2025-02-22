@@ -1,5 +1,5 @@
 ---
-description: ui rules
+description: rules ui component library
 globs: packages/ui/*
 ---
 ## Component Library Rules

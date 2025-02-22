@@ -1,0 +1,283 @@
+---
+description: rules for storybook docs app
+globs: apps/docs/*
+---
+## Storybook Documentation Rules
+
+1. Directory Structure
+```
+apps/docs/
+├── stories/            # Component stories
+├── .storybook/        # Storybook configuration
+├── package.json       # Dependencies
+└── tsconfig.json      # TypeScript configuration
+```
+
+2. Story File Structure
+```tsx
+// Example story structure
+import React from "react"
+import type { Meta, StoryObj } from "@storybook/react"
+import { ComponentName } from "@acme/ui/components/primitives/component-name"
+
+const meta = {
+  title: "Primitives/ComponentName",
+  component: ComponentName,
+  tags: ["autodocs"],
+  // Optional: Add decorators for consistent layout
+  decorators: [
+    (Story) => (
+      <div className="flex min-h-[350px] w-full items-center justify-center p-8">
+        <Story />
+      </div>
+    ),
+  ],
+} satisfies Meta<typeof ComponentName>
+
+export default meta
+type Story = StoryObj<typeof ComponentName>
+
+// Stories follow...
+```
+
+3. Story Naming Conventions
+```tsx
+// Basic usage
+export const Default: Story = {
+  render: () => <ComponentName>Basic usage</ComponentName>,
+}
+
+// Variants and states
+export const WithIcon: Story = {
+  render: () => <ComponentName><Icon /></ComponentName>,
+}
+
+export const Disabled: Story = {
+  render: () => <ComponentName disabled>Disabled state</ComponentName>,
+}
+
+// Interactive examples
+export const Interactive: Story = {
+  render: function InteractiveExample() {
+    const [state, setState] = React.useState()
+    return <ComponentName value={state} onChange={setState} />
+  },
+}
+```
+
+4. Story Organization Guidelines
+- Group related stories in a logical progression
+- Start with basic usage
+- Follow with variants and states
+- Include interactive examples
+- End with complex use cases
+- Example order:
+  1. Default
+  2. Variants (Primary, Secondary, etc.)
+  3. States (Disabled, Loading, etc.)
+  4. With Icons/Content
+  5. Interactive Examples
+  6. Complex Compositions
+
+5. Story Documentation Requirements
+```tsx
+// Component metadata
+const meta = {
+  title: "Primitives/ComponentName", // ✅ Clear categorization
+  component: ComponentName,
+  tags: ["autodocs"],
+  argTypes: {
+    variant: {
+      control: "select",
+      options: ["default", "primary", "secondary"],
+      description: "The visual style variant", // ✅ Clear description
+    },
+    size: {
+      control: "radio",
+      options: ["sm", "md", "lg"],
+      description: "The size of the component",
+    },
+  },
+} satisfies Meta<typeof ComponentName>
+
+// Story comments
+// Basic usage with default props
+export const Default: Story = {
+  render: () => <ComponentName>Content</ComponentName>,
+}
+
+// Shows various size options available
+export const Sizes: Story = {
+  render: () => (
+    <div className="flex gap-4">
+      <ComponentName size="sm">Small</ComponentName>
+      <ComponentName size="md">Medium</ComponentName>
+      <ComponentName size="lg">Large</ComponentName>
+    </div>
+  ),
+}
+```
+
+6. Interactive Story Guidelines
+```tsx
+// Use function declarations for interactive stories
+export const Interactive: Story = {
+  render: function InteractiveExample() {
+    // State management
+    const [value, setValue] = React.useState(initialValue)
+
+    // Event handlers
+    const handleChange = (newValue: typeof value) => {
+      setValue(newValue)
+    }
+
+    // Optional: Status display
+    return (
+      <div className="space-y-4">
+        <div className="text-sm text-muted-foreground">
+          Current value: {value}
+        </div>
+        <ComponentName value={value} onChange={handleChange} />
+      </div>
+    )
+  },
+}
+```
+
+7. Composition Guidelines
+```tsx
+// When demonstrating component composition
+export const Composed: Story = {
+  render: () => (
+    <ParentComponent>
+      <ChildComponent>First Child</ChildComponent>
+      <ChildComponent>Second Child</ChildComponent>
+      <ChildComponent>Third Child</ChildComponent>
+    </ParentComponent>
+  ),
+}
+
+// For complex layouts
+export const ComplexLayout: Story = {
+  render: () => (
+    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <ComponentName>First</ComponentName>
+      <ComponentName>Second</ComponentName>
+      <ComponentName>Third</ComponentName>
+    </div>
+  ),
+}
+```
+
+8. Responsive Design Guidelines
+```tsx
+// Show responsive behavior
+export const ResponsiveLayout: Story = {
+  render: () => (
+    <>
+      {/* Desktop version */}
+      <div className="hidden md:block">
+        <ComponentName orientation="horizontal" />
+      </div>
+      {/* Mobile version */}
+      <div className="md:hidden">
+        <ComponentName orientation="vertical" />
+      </div>
+    </>
+  ),
+}
+```
+
+9. State Management Rules
+```tsx
+// For complex state management
+export const WithState: Story = {
+  render: function StateExample() {
+    // Group related state
+    const [formState, setFormState] = React.useState({
+      name: "",
+      email: "",
+      preferences: [],
+    })
+
+    // Use reducers for complex state
+    const [state, dispatch] = React.useReducer(reducer, initialState)
+
+    // Memoize callbacks
+    const handleChange = React.useCallback((value) => {
+      setFormState((prev) => ({ ...prev, ...value }))
+    }, [])
+
+    return <ComponentName {...formState} onChange={handleChange} />
+  },
+}
+```
+
+10. Error Handling Guidelines
+```tsx
+// Demonstrate error states
+export const WithErrors: Story = {
+  render: function ErrorExample() {
+    const [error, setError] = React.useState<Error | null>(null)
+
+    return (
+      <div className="space-y-4">
+        <ComponentName
+          onError={(e) => setError(e)}
+          aria-invalid={!!error}
+        />
+        {error && (
+          <p className="text-sm text-destructive">{error.message}</p>
+        )}
+      </div>
+    )
+  },
+}
+```
+
+11. Accessibility Guidelines
+```tsx
+// Demonstrate accessibility features
+export const AccessibleExample: Story = {
+  render: () => (
+    <ComponentName
+      aria-label="Descriptive label"
+      aria-describedby="helper-text"
+    >
+      <span id="helper-text" className="sr-only">
+        Helper text for screen readers
+      </span>
+      Content
+    </ComponentName>
+  ),
+}
+```
+
+12. Performance Guidelines
+```tsx
+// For performance-sensitive stories
+export const PerformanceExample: Story = {
+  render: function PerformanceExample() {
+    // Memoize expensive computations
+    const processedData = React.useMemo(
+      () => expensiveOperation(data),
+      [data]
+    )
+
+    // Memoize event handlers
+    const handleChange = React.useCallback(
+      (value) => {
+        // Handle change
+      },
+      []
+    )
+
+    return (
+      <ComponentName
+        data={processedData}
+        onChange={handleChange}
+      />
+    )
+  },
+}
+```

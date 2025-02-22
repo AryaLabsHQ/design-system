@@ -1,0 +1,232 @@
+---
+description: ui rules
+globs: packages/ui/*
+---
+## Component Library Rules
+1. Directory Structure
+packages/ui/
+├── src/
+│   ├── components/
+│   │   ├── primitives/     # Base shadcn components
+│   │   ├── composed/       # Higher-order components
+│   │   └── patterns/       # Common UI patterns/layouts
+│   ├── hooks/             # Shared hooks
+│   ├── utils/             # Utility functions
+│   ├── styles/            # Global styles
+│   └── types/             # Shared TypeScript types
+
+2. Component Architecture
+// Example component structure
+export interface CustomButtonProps extends ButtonProps {
+  isLoading?: boolean;
+  loadingText?: string;
+}
+
+export const CustomButton = React.forwardRef<
+  HTMLButtonElement,
+  CustomButtonProps
+>(({ 
+  children, 
+  isLoading, 
+  loadingText = "Loading...",
+  className,
+  disabled,
+  ...props 
+}, ref) => {
+  return (
+    <Button
+      ref={ref}
+      className={cn(
+        "relative",
+        isLoading && "cursor-not-allowed",
+        className
+      )}
+      disabled={disabled || isLoading}
+      {...props}
+    >
+      {isLoading ? loadingText : children}
+    </Button>
+  );
+});
+
+CustomButton.displayName = "CustomButton";
+
+3. Naming Conventions
+// Component naming
+export const DataTable = "DataTable"; // ✅ PascalCase for components
+export const dataTable = "DataTable"; // ❌ No camelCase for components
+
+// Props naming
+interface TableProps {
+  isLoading: boolean;      // ✅ Boolean props start with is/has/should
+  data: TableData[];       // ✅ Clear, descriptive names
+  onRowClick: (row: Row) => void; // ✅ Event handlers start with 'on'
+  handleClick: () => void; // ❌ Don't use 'handle' prefix for props
+}
+
+4. Export Rules
+// Named exports for all components
+export { Button } from "./components/primitives/button";
+export type { ButtonProps } from "./components/primitives/button";
+
+// No default exports
+export default Button; // ❌ Avoid default exports
+
+5. Component Extension Guidelines
+// Extending shadcn components
+export interface CustomDialogProps extends DialogProps {
+  title: string;
+  description?: string;
+  footer?: React.ReactNode;
+}
+
+export function CustomDialog({
+  title,
+  description,
+  footer,
+  children,
+  ...props
+}: CustomDialogProps) {
+  return (
+    <Dialog {...props}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{title}</DialogTitle>
+          {description && (
+            <DialogDescription>{description}</DialogDescription>
+          )}
+        </DialogHeader>
+        {children}
+        {footer && (
+          <DialogFooter>{footer}</DialogFooter>
+        )}
+      </DialogContent>
+    </Dialog>
+  );
+}
+
+6. Style Extension Rules
+// Extending shadcn styles
+const customButtonVariants = cva(
+  buttonVariants({ 
+    // Extend base variants
+    variants: {
+      variant: {
+        custom: "bg-gradient-to-r from-blue-500 to-purple-500",
+      },
+      size: {
+        xl: "h-12 px-8 text-lg",
+      },
+    },
+  })
+);
+
+7. Documentation Requirements
+/**
+ * CustomButton component extends the base Button with loading state.
+ * 
+ * @example
+ * ```tsx
+ * <CustomButton isLoading loadingText="Processing...">
+ *   Submit
+ * </CustomButton>
+ * ```
+ * 
+ * @param props - Extended button props
+ * @param props.isLoading - Whether the button is in loading state
+ * @param props.loadingText - Text to display during loading
+ */
+export const CustomButton = ...
+
+8. Testing Guidelines
+import { render, screen } from '@testing-library/react';
+import { CustomButton } from '../components/custom-button';
+
+describe('CustomButton', () => {
+  it('should render loading state correctly', () => {
+    render(<CustomButton isLoading>Click me</CustomButton>);
+    expect(screen.getByText('Loading...')).toBeInTheDocument();
+  });
+});
+9. Component Composition Rules
+// Prefer composition over inheritance
+export function DataTableWithPagination({
+  data,
+  pageSize = 10,
+  ...props
+}: DataTableWithPaginationProps) {
+  return (
+    <div className="space-y-4">
+      <DataTable data={data} {...props} />
+      <Pagination totalItems={data.length} pageSize={pageSize} />
+    </div>
+  );
+}
+10. Type Safety Rules
+// Strict type checking
+interface TableColumn<T> {
+  key: keyof T;
+  header: string;
+  cell?: (row: T) => React.ReactNode;
+}
+
+// Generic components
+export function DataTable<T extends Record<string, unknown>>({
+  data,
+  columns,
+}: DataTableProps<T>) {
+  return (
+    // Implementation
+  );
+}
+
+11. Performance Guidelines
+// Memoize expensive computations
+const MemoizedComponent = React.memo(function Component({
+  data,
+  onAction,
+}: ComponentProps) {
+  const processedData = useMemo(() => 
+    expensiveOperation(data),
+    [data]
+  );
+
+  const handleAction = useCallback(() => {
+    onAction(processedData);
+  }, [onAction, processedData]);
+
+  return (
+    // Implementation
+  );
+});
+
+12. Accessibility Standards
+export function CustomAccordion({
+  items,
+  ...props
+}: CustomAccordionProps) {
+  return (
+    <Accordion
+      type="single"
+      collapsible
+      {...props}
+    >
+      {items.map((item, index) => (
+        <AccordionItem
+          key={item.id}
+          value={item.id}
+          role="region"
+          aria-labelledby={`heading-${item.id}`}
+        >
+          <AccordionTrigger
+            id={`heading-${item.id}`}
+            className="focus:ring-2 focus:ring-offset-2"
+          >
+            {item.title}
+          </AccordionTrigger>
+          <AccordionContent>{item.content}</AccordionContent>
+        </AccordionItem>
+      ))}
+    </Accordion>
+  );
+}

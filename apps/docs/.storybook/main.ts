@@ -1,10 +1,14 @@
-import { dirname, join, resolve } from "path";
+import { createRequire } from "node:module";
+import { dirname, join, resolve } from "node:path";
+import type { StorybookConfig } from "@storybook/react-vite";
 
-function getAbsolutePath(value) {
+const require = createRequire(import.meta.url);
+
+function getAbsolutePath(value: string) {
   return dirname(require.resolve(join(value, "package.json")));
 }
 
-const config = {
+const config: StorybookConfig = {
   stories: ["../stories/*.stories.tsx", "../stories/**/*.stories.tsx"],
   addons: [
     getAbsolutePath("@storybook/addon-links"),
@@ -13,6 +17,10 @@ const config = {
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
+  },
+
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
   },
 
   core: {},

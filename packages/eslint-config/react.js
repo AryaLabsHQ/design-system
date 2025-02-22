@@ -35,5 +35,7 @@ module.exports = {
   // add rules configurations here
   rules: {
     "import/no-default-export": "off",
+    "import/newlines-between": "off",
+    "import/order": "off",
   },
 };

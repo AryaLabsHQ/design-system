@@ -38,8 +38,8 @@
     "clean": "rm -rf .turbo node_modules dist"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@arya.sh/eslint-config": "workspace:*",
+    "@arya.sh/typescript-config": "workspace:*",
     "@rollup/plugin-typescript": "^12.1.2",
     "@tailwindcss/cli": "^4.0.8",
     "@types/node": "22.13.5",

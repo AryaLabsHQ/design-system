@@ -8,7 +8,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@arya.sh/ui/components/primitives/navigation-menu";
+} from "@arya.sh/ui/primitives/navigation-menu";
 import { cn } from "@arya.sh/ui/utils";
 import {
   BarChart,

@@ -8,7 +8,7 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from "@arya.sh/ui/components/primitives/pagination"
+} from "@arya.sh/ui/primitives/pagination"
 
 const meta = {
   title: "Primitives/Pagination",

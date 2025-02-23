@@ -11,12 +11,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@arya.sh/ui/components/primitives/form"
-import { Input } from "@arya.sh/ui/components/primitives/input"
-import { Button } from "@arya.sh/ui/components/primitives/button"
-import { Checkbox } from "@arya.sh/ui/components/primitives/checkbox"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@arya.sh/ui/components/primitives/select"
-import { Card } from "@arya.sh/ui/components/primitives/card"
+} from "@arya.sh/ui/primitives/form"
+import { Input } from "@arya.sh/ui/primitives/input"
+import { Button } from "@arya.sh/ui/primitives/button"
+import { Checkbox } from "@arya.sh/ui/primitives/checkbox"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@arya.sh/ui/primitives/select"
+import { Card } from "@arya.sh/ui/primitives/card"
 
 const meta = {
   title: "Primitives/Form",

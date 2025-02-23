@@ -3,10 +3,10 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@arya.sh/ui/components/primitives/collapsible";
-import { Button } from "@arya.sh/ui/components/primitives/button";
-import { Badge } from "@arya.sh/ui/components/primitives/badge";
-import { Card } from "@arya.sh/ui/components/primitives/card";
+} from "@arya.sh/ui/primitives/collapsible";
+import { Button } from "@arya.sh/ui/primitives/button";
+import { Badge } from "@arya.sh/ui/primitives/badge";
+import { Card } from "@arya.sh/ui/primitives/card";
 import {
   ChevronsUpDown,
   Plus,

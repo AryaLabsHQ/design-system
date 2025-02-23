@@ -9,11 +9,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@arya.sh/ui/components/primitives/table";
-import { Badge } from "@arya.sh/ui/components/primitives/badge";
-import { Button } from "@arya.sh/ui/components/primitives/button";
-import { Checkbox } from "@arya.sh/ui/components/primitives/checkbox";
-import { Avatar, AvatarFallback, AvatarImage } from "@arya.sh/ui/components/primitives/avatar";
+} from "@arya.sh/ui/primitives/table";
+import { Badge } from "@arya.sh/ui/primitives/badge";
+import { Button } from "@arya.sh/ui/primitives/button";
+import { Checkbox } from "@arya.sh/ui/primitives/checkbox";
+import { Avatar, AvatarFallback, AvatarImage } from "@arya.sh/ui/primitives/avatar";
 import {
   MoreHorizontal,
   ArrowUpDown,

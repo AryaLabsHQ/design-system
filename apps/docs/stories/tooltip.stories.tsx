@@ -3,8 +3,8 @@ import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@arya.sh/ui/components/primitives/tooltip";
-import { Button } from "@arya.sh/ui/components/primitives/button";
+} from "@arya.sh/ui/primitives/tooltip";
+import { Button } from "@arya.sh/ui/primitives/button";
 import {
   HelpCircle,
   Info,

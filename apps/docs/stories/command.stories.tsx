@@ -10,7 +10,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from "@arya.sh/ui/components/primitives/command";
+} from "@arya.sh/ui/primitives/command";
 import {
   Calculator,
   Calendar,

@@ -4,9 +4,9 @@ import {
   ResizablePanelGroup,
   ResizablePanel,
   ResizableHandle,
-} from "@arya.sh/ui/components/primitives/resizable"
-import { Card } from "@arya.sh/ui/components/primitives/card"
-import { ScrollArea } from "@arya.sh/ui/components/primitives/scroll-area"
+} from "@arya.sh/ui/primitives/resizable"
+import { Card } from "@arya.sh/ui/primitives/card"
+import { ScrollArea } from "@arya.sh/ui/primitives/scroll-area"
 
 const meta = {
   title: "Primitives/Resizable",

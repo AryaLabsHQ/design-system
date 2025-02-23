@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Toggle } from "@arya.sh/ui/components/primitives/toggle";
+import { Toggle } from "@arya.sh/ui/primitives/toggle";
 import {
   Bold,
   Italic,

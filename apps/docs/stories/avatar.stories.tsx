@@ -3,8 +3,8 @@ import {
   Avatar,
   AvatarImage,
   AvatarFallback,
-} from "@arya.sh/ui/components/primitives/avatar";
-import { Badge } from "@arya.sh/ui/components/primitives/badge";
+} from "@arya.sh/ui/primitives/avatar";
+import { Badge } from "@arya.sh/ui/primitives/badge";
 import { cn } from "@arya.sh/ui/utils";
 
 const meta: Meta<typeof Avatar> = {

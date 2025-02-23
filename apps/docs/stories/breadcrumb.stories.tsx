@@ -8,8 +8,8 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
-} from "@arya.sh/ui/components/primitives/breadcrumb"
-import { Card } from "@arya.sh/ui/components/primitives/card"
+} from "@arya.sh/ui/primitives/breadcrumb"
+import { Card } from "@arya.sh/ui/primitives/card"
 import { ChevronRight, Home, File, Folder, Settings } from "lucide-react"
 
 const meta = {

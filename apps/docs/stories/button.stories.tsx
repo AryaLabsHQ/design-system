@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@arya.sh/ui/components/primitives/button";
+import { Button } from "@arya.sh/ui/primitives/button";
 import { Mail, Loader2, Github } from "lucide-react";
 
 const meta: Meta<typeof Button> = {

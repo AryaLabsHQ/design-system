@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { AspectRatio } from "@arya.sh/ui/components/primitives/aspect-ratio";
-import { Card } from "@arya.sh/ui/components/primitives/card";
+import { AspectRatio } from "@arya.sh/ui/primitives/aspect-ratio";
+import { Card } from "@arya.sh/ui/primitives/card";
 
 const meta: Meta<typeof AspectRatio> = {
   title: "Primitives/AspectRatio",

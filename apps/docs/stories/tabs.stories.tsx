@@ -4,11 +4,11 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger,
-} from "@arya.sh/ui/components/primitives/tabs";
-import { Button } from "@arya.sh/ui/components/primitives/button";
-import { Input } from "@arya.sh/ui/components/primitives/input";
-import { Label } from "@arya.sh/ui/components/primitives/label";
-import { Card, CardContent } from "@arya.sh/ui/components/primitives/card";
+} from "@arya.sh/ui/primitives/tabs";
+import { Button } from "@arya.sh/ui/primitives/button";
+import { Input } from "@arya.sh/ui/primitives/input";
+import { Label } from "@arya.sh/ui/primitives/label";
+import { Card, CardContent } from "@arya.sh/ui/primitives/card";
 import {
   CreditCard,
   Settings,

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import {
   ToggleGroup,
   ToggleGroupItem,
-} from "@arya.sh/ui/components/primitives/toggle-group";
+} from "@arya.sh/ui/primitives/toggle-group";
 import {
   AlignLeft,
   AlignCenter,

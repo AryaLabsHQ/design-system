@@ -18,7 +18,7 @@ apps/docs/
 // Example story structure
 import React from "react"
 import type { Meta, StoryObj } from "@storybook/react"
-import { ComponentName } from "@arya.sh/ui/components/primitives/component-name"
+import { ComponentName } from "@arya.sh/ui/primitives/component-name"
 
 const meta = {
   title: "Primitives/ComponentName",

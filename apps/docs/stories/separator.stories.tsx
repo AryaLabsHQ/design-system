@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Separator } from "@arya.sh/ui/components/primitives/separator";
-import { Button } from "@arya.sh/ui/components/primitives/button";
+import { Separator } from "@arya.sh/ui/primitives/separator";
+import { Button } from "@arya.sh/ui/primitives/button";
 import { Mail, Home, Settings, CreditCard, User } from "lucide-react";
 
 const meta: Meta<typeof Separator> = {

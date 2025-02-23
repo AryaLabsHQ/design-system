@@ -3,8 +3,8 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@arya.sh/ui/components/primitives/alert";
-import { Button } from "@arya.sh/ui/components/primitives/button";
+} from "@arya.sh/ui/primitives/alert";
+import { Button } from "@arya.sh/ui/primitives/button";
 import {
   AlertCircle,
   AlertTriangle,

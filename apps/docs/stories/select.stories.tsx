@@ -8,7 +8,7 @@ import {
   SelectSeparator,
   SelectTrigger,
   SelectValue,
-} from "@arya.sh/ui/components/primitives/select";
+} from "@arya.sh/ui/primitives/select";
 
 const meta: Meta<typeof Select> = {
   title: "Primitives/Select",

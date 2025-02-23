@@ -7,10 +7,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@arya.sh/ui/components/primitives/dialog";
-import { Button } from "@arya.sh/ui/components/primitives/button";
-import { Input } from "@arya.sh/ui/components/primitives/input";
-import { Label } from "@arya.sh/ui/components/primitives/label";
+} from "@arya.sh/ui/primitives/dialog";
+import { Button } from "@arya.sh/ui/primitives/button";
+import { Input } from "@arya.sh/ui/primitives/input";
+import { Label } from "@arya.sh/ui/primitives/label";
 import { AlertTriangle, Trash2 } from "lucide-react";
 
 const meta: Meta<typeof Dialog> = {

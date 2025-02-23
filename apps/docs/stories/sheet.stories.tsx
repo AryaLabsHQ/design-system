@@ -8,11 +8,11 @@ import {
   SheetTitle,
   SheetTrigger,
   SheetFooter,
-} from "@arya.sh/ui/components/primitives/sheet";
-import { Button } from "@arya.sh/ui/components/primitives/button";
-import { Input } from "@arya.sh/ui/components/primitives/input";
-import { Label } from "@arya.sh/ui/components/primitives/label";
-import { Separator } from "@arya.sh/ui/components/primitives/separator";
+} from "@arya.sh/ui/primitives/sheet";
+import { Button } from "@arya.sh/ui/primitives/button";
+import { Input } from "@arya.sh/ui/primitives/input";
+import { Label } from "@arya.sh/ui/primitives/label";
+import { Separator } from "@arya.sh/ui/primitives/separator";
 import {
   Menu,
   Settings,

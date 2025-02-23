@@ -7,11 +7,11 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from "@arya.sh/ui/components/primitives/carousel"
-import { Card } from "@arya.sh/ui/components/primitives/card"
-import { AspectRatio } from "@arya.sh/ui/components/primitives/aspect-ratio"
-import { Button } from "@arya.sh/ui/components/primitives/button"
-import { Badge } from "@arya.sh/ui/components/primitives/badge"
+} from "@arya.sh/ui/primitives/carousel"
+import { Card } from "@arya.sh/ui/primitives/card"
+import { AspectRatio } from "@arya.sh/ui/primitives/aspect-ratio"
+import { Button } from "@arya.sh/ui/primitives/button"
+import { Badge } from "@arya.sh/ui/primitives/badge"
 import { Heart, Share2, Star } from "lucide-react"
 
 const meta = {

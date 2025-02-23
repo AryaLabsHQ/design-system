@@ -14,8 +14,8 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@arya.sh/ui/components/primitives/context-menu";
-import { Card } from "@arya.sh/ui/components/primitives/card";
+} from "@arya.sh/ui/primitives/context-menu";
+import { Card } from "@arya.sh/ui/primitives/card";
 import {
   Copy,
   Edit,

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Badge } from "@arya.sh/ui/components/primitives/badge";
+import { Badge } from "@arya.sh/ui/primitives/badge";
 import {
   CheckCircle2,
   Clock,

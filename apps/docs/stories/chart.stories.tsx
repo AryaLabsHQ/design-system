@@ -4,7 +4,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@arya.sh/ui/components/primitives/chart"
+} from "@arya.sh/ui/primitives/chart"
 import {
   Area,
   AreaChart,
@@ -20,7 +20,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts"
-import { Card } from "@arya.sh/ui/components/primitives/card"
+import { Card } from "@arya.sh/ui/primitives/card"
 
 const meta = {
   title: "Primitives/Chart",

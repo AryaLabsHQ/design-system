@@ -4,9 +4,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@arya.sh/ui/components/primitives/accordion";
-import { Button } from "@arya.sh/ui/components/primitives/button";
-import { Badge } from "@arya.sh/ui/components/primitives/badge";
+} from "@arya.sh/ui/primitives/accordion";
+import { Button } from "@arya.sh/ui/primitives/button";
+import { Badge } from "@arya.sh/ui/primitives/badge";
 import {
   Settings,
   User,

@@ -3,10 +3,10 @@ import type { Meta, StoryObj } from "@storybook/react";
 import {
   RadioGroup,
   RadioGroupItem,
-} from "@arya.sh/ui/components/primitives/radio-group";
-import { Label } from "@arya.sh/ui/components/primitives/label";
-import { Card } from "@arya.sh/ui/components/primitives/card";
-import { Badge } from "@arya.sh/ui/components/primitives/badge";
+} from "@arya.sh/ui/primitives/radio-group";
+import { Label } from "@arya.sh/ui/primitives/label";
+import { Card } from "@arya.sh/ui/primitives/card";
+import { Badge } from "@arya.sh/ui/primitives/badge";
 import {
   Laptop,
   Moon,

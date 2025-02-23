@@ -1,7 +1,7 @@
 import * as React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Skeleton } from "@arya.sh/ui/components/primitives/skeleton";
-import { Card } from "@arya.sh/ui/components/primitives/card";
+import { Skeleton } from "@arya.sh/ui/primitives/skeleton";
+import { Card } from "@arya.sh/ui/primitives/card";
 
 const meta: Meta<typeof Skeleton> = {
   title: "Primitives/Skeleton",

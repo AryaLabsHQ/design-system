@@ -3,9 +3,9 @@ import {
   Avatar,
   AvatarImage,
   AvatarFallback,
-} from "@acme/ui/components/primitives/avatar";
-import { Badge } from "@acme/ui/components/primitives/badge";
-import { cn } from "@acme/ui/utils";
+} from "@arya.sh/ui/components/primitives/avatar";
+import { Badge } from "@arya.sh/ui/components/primitives/badge";
+import { cn } from "@arya.sh/ui/utils";
 
 const meta: Meta<typeof Avatar> = {
   title: "Primitives/Avatar",

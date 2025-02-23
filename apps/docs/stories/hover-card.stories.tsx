@@ -4,9 +4,9 @@ import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
-} from "@acme/ui/components/primitives/hover-card";
-import { Button } from "@acme/ui/components/primitives/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@acme/ui/components/primitives/avatar";
+} from "@arya.sh/ui/components/primitives/hover-card";
+import { Button } from "@arya.sh/ui/components/primitives/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@arya.sh/ui/components/primitives/avatar";
 import { CalendarDays, Mail, MessageCircle, Github, Twitter, ExternalLink } from "lucide-react";
 
 const meta: Meta<typeof HoverCard> = {

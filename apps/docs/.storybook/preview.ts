@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
 
-import "@acme/ui/styles";
+import "@arya.sh/ui/styles";
 
 const preview: Preview = {
   parameters: {},

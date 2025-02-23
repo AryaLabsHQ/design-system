@@ -5,9 +5,9 @@ import {
   InputOTPGroup,
   InputOTPSlot,
   InputOTPSeparator,
-} from "@acme/ui/components/primitives/input-otp"
-import { Button } from "@acme/ui/components/primitives/button"
-import { Card } from "@acme/ui/components/primitives/card"
+} from "@arya.sh/ui/components/primitives/input-otp"
+import { Button } from "@arya.sh/ui/components/primitives/button"
+import { Card } from "@arya.sh/ui/components/primitives/card"
 
 const meta = {
   title: "Primitives/InputOTP",

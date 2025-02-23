@@ -1,6 +1,6 @@
 {
-  "name": "@acme/ui",
-  "version": "0.0.0",
+  "name": "@arya.sh/ui",
+  "version": "1.0.0",
   "sideEffects": false,
   "license": "MIT",
   "type": "module",

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Progress } from "@acme/ui/components/primitives/progress";
-import { Button } from "@acme/ui/components/primitives/button";
+import { Progress } from "@arya.sh/ui/components/primitives/progress";
+import { Button } from "@arya.sh/ui/components/primitives/button";
 import { useState, useEffect } from "react";
 import { CheckCircle2, Download, Upload } from "lucide-react";
 

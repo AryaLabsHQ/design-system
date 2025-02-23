@@ -9,11 +9,11 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@acme/ui/components/primitives/drawer"
-import { Button } from "@acme/ui/components/primitives/button"
-import { Input } from "@acme/ui/components/primitives/input"
-import { Label } from "@acme/ui/components/primitives/label"
-import { ScrollArea } from "@acme/ui/components/primitives/scroll-area"
+} from "@arya.sh/ui/components/primitives/drawer"
+import { Button } from "@arya.sh/ui/components/primitives/button"
+import { Input } from "@arya.sh/ui/components/primitives/input"
+import { Label } from "@arya.sh/ui/components/primitives/label"
+import { ScrollArea } from "@arya.sh/ui/components/primitives/scroll-area"
 import {
   Settings,
   User,

@@ -1,7 +1,7 @@
 import React from "react"
 import type { Meta, StoryObj } from "@storybook/react"
-import { Calendar } from "@acme/ui/components/primitives/calendar"
-import { Card } from "@acme/ui/components/primitives/card"
+import { Calendar } from "@arya.sh/ui/components/primitives/calendar"
+import { Card } from "@arya.sh/ui/components/primitives/card"
 import { addDays, format } from "date-fns"
 import type { DateRange } from "react-day-picker"
 

@@ -16,8 +16,8 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuRadioGroup,
-} from "@acme/ui/components/primitives/dropdown-menu"
-import { Button } from "@acme/ui/components/primitives/button"
+} from "@arya.sh/ui/components/primitives/dropdown-menu"
+import { Button } from "@arya.sh/ui/components/primitives/button"
 import {
   Cloud,
   CreditCard,

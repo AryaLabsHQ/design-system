@@ -21,9 +21,9 @@ import {
   SidebarProvider,
   SidebarSeparator,
   SidebarTrigger,
-} from "@acme/ui/components/primitives/sidebar";
-import { Button } from "@acme/ui/components/primitives/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@acme/ui/components/primitives/avatar";
+} from "@arya.sh/ui/components/primitives/sidebar";
+import { Button } from "@arya.sh/ui/components/primitives/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@arya.sh/ui/components/primitives/avatar";
 import {
   LayoutDashboard,
   Users,

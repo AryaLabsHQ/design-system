@@ -1,10 +1,10 @@
 import * as React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Label } from "@acme/ui/components/primitives/label";
-import { Input } from "@acme/ui/components/primitives/input";
-import { Checkbox } from "@acme/ui/components/primitives/checkbox";
-import { Switch } from "@acme/ui/components/primitives/switch";
-import { RadioGroup, RadioGroupItem } from "@acme/ui/components/primitives/radio-group";
+import { Label } from "@arya.sh/ui/components/primitives/label";
+import { Input } from "@arya.sh/ui/components/primitives/input";
+import { Checkbox } from "@arya.sh/ui/components/primitives/checkbox";
+import { Switch } from "@arya.sh/ui/components/primitives/switch";
+import { RadioGroup, RadioGroupItem } from "@arya.sh/ui/components/primitives/radio-group";
 
 const meta: Meta<typeof Label> = {
   title: "Primitives/Label",

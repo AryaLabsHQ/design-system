@@ -15,7 +15,7 @@ import {
   MenubarSubContent,
   MenubarSubTrigger,
   MenubarLabel,
-} from "@acme/ui/components/primitives/menubar";
+} from "@arya.sh/ui/components/primitives/menubar";
 import {
   Cloud,
   CreditCard,

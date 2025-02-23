@@ -11,7 +11,7 @@
     "lint": "eslint ./stories/*.stories.tsx --max-warnings 0"
   },
   "dependencies": {
-    "@acme/ui": "workspace:*",
+    "@arya.sh/ui": "workspace:*",
     "@hookform/resolvers": "^4.1.0",
     "date-fns": "^4.1.0",
     "lucide-react": "^0.475.0",

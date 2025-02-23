@@ -3,8 +3,8 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
-} from "@acme/ui/components/primitives/alert";
-import { Button } from "@acme/ui/components/primitives/button";
+} from "@arya.sh/ui/components/primitives/alert";
+import { Button } from "@arya.sh/ui/components/primitives/button";
 import {
   AlertCircle,
   AlertTriangle,
@@ -106,7 +106,7 @@ export const CodeSnippet: Story = {
       <AlertTitle>Installation Command</AlertTitle>
       <AlertDescription>
         <pre className="mt-2 w-full rounded-md bg-slate-950 p-4">
-          <code className="text-white">npm install @acme/ui</code>
+          <code className="text-white">npm install @arya.sh/ui</code>
         </pre>
       </AlertDescription>
     </Alert>

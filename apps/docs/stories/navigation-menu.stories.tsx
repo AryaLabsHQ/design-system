@@ -8,8 +8,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "@acme/ui/components/primitives/navigation-menu";
-import { cn } from "@acme/ui/utils";
+} from "@arya.sh/ui/components/primitives/navigation-menu";
+import { cn } from "@arya.sh/ui/utils";
 import {
   BarChart,
   Book,

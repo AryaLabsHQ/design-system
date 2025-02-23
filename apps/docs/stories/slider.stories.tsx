@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Slider } from "@acme/ui/components/primitives/slider";
+import { Slider } from "@arya.sh/ui/components/primitives/slider";
 import { useState } from "react";
 import { Volume2, VolumeX, Sun, Moon } from "lucide-react";
 

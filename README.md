@@ -6,7 +6,7 @@ This guide explains how to use a React design system starter powered by:
 
 - 🏎 [Turborepo](https://turbo.build/repo) — High-performance build system for Monorepos
 - 🚀 [React](https://reactjs.org/) — JavaScript library for user interfaces
-- 🛠 [Tsup](https://github.com/egoist/tsup) — TypeScript bundler powered by esbuild
+- 🛠 [Rollup](https://rollupjs.org/) - Bundler for Component Library
 - 📖 [Storybook](https://storybook.js.org/) — UI component environment powered by Vite
 
 As well as a few others tools preconfigured:
@@ -58,17 +58,17 @@ To make the ui library code work across all browsers, we need to compile the raw
 
 Running `pnpm build` from the root of the Turborepo will run the `build` command defined in each package's `package.json` file. Turborepo runs each `build` in parallel and caches & hashes the output to speed up future builds.
 
-For `@acme/ui`, the `build` command is equivalent to the following:
+For `@arya.sh/ui`, the `build` command is equivalent to the following:
 
 ```bash
 tsup src/*.tsx --format esm,cjs --dts --external react
 ```
 
-`tsup` compiles all of the components in the design system individually, into both ES Modules and CommonJS formats as well as their TypeScript types. The `package.json` for `@acme/ui` then instructs the consumer to select the correct format:
+`tsup` compiles all of the components in the design system individually, into both ES Modules and CommonJS formats as well as their TypeScript types. The `package.json` for `@arya.sh/ui` then instructs the consumer to select the correct format:
 
 ```json:ui/package.json
 {
-  "name": "@acme/ui",
+  "name": "@arya.sh/ui",
   "version": "0.0.0",
   "sideEffects": false,
   "exports":{
@@ -114,7 +114,7 @@ When adding a new file, ensure that its specifier is defined in `package.json` f
 
 ```json:ui/package.json
 {
-  "name": "@acme/ui",
+  "name": "@arya.sh/ui",
   "version": "0.0.0",
   "sideEffects": false,
   "exports":{
@@ -134,13 +134,13 @@ Storybook provides us with an interactive UI playground for our components. This
 
 - Use Vite to bundle stories instantly (in milliseconds)
 - Automatically find any stories inside the `stories/` folder
-- Support using module path aliases like `@acme/ui` for imports
+- Support using module path aliases like `@arya.sh/ui` for imports
 - Write MDX for component documentation pages
 
 For example, here's the included Story for our `Button` component:
 
 ```js:apps/docs/stories/button.stories.mdx
-import { Button } from '@acme/ui/button';
+import { Button } from '@arya.sh/ui/button';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 
 <Meta title="Components/Button" component={Button} />

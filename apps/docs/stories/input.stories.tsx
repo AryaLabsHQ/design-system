@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Input } from "@acme/ui/components/primitives/input";
+import { Input } from "@arya.sh/ui/components/primitives/input";
 import { Mail, Search, User } from "lucide-react";
 
 const meta: Meta<typeof Input> = {

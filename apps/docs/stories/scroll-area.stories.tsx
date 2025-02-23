@@ -1,10 +1,10 @@
 import * as React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ScrollArea } from "@acme/ui/components/primitives/scroll-area";
-import { Separator } from "@acme/ui/components/primitives/separator";
-import { Badge } from "@acme/ui/components/primitives/badge";
-import { Avatar, AvatarImage, AvatarFallback } from "@acme/ui/components/primitives/avatar";
-import { Card } from "@acme/ui/components/primitives/card";
+import { ScrollArea } from "@arya.sh/ui/components/primitives/scroll-area";
+import { Separator } from "@arya.sh/ui/components/primitives/separator";
+import { Badge } from "@arya.sh/ui/components/primitives/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@arya.sh/ui/components/primitives/avatar";
+import { Card } from "@arya.sh/ui/components/primitives/card";
 
 const meta: Meta<typeof ScrollArea> = {
   title: "Primitives/ScrollArea",

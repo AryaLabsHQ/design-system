@@ -10,10 +10,10 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@acme/ui/components/primitives/alert-dialog"
-import { Button } from "@acme/ui/components/primitives/button"
-import { Input } from "@acme/ui/components/primitives/input"
-import { Label } from "@acme/ui/components/primitives/label"
+} from "@arya.sh/ui/components/primitives/alert-dialog"
+import { Button } from "@arya.sh/ui/components/primitives/button"
+import { Input } from "@arya.sh/ui/components/primitives/input"
+import { Label } from "@arya.sh/ui/components/primitives/label"
 import { AlertTriangle, Trash2, LogOut, Archive, Shield } from "lucide-react"
 
 const meta = {

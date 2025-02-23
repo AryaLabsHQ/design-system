@@ -1,4 +1,4 @@
-# @acme/ui
+# @arya.sh/ui
 
 A modern, accessible, and customizable React component library built with shadcn/ui, Radix UI primitives, and Tailwind CSS.
 
@@ -15,7 +15,7 @@ A modern, accessible, and customizable React component library built with shadcn
 ## Installation
 
 ```bash
-pnpm add @acme/ui
+pnpm add @arya.sh/ui
 ```
 
 ## Requirements
@@ -43,7 +43,7 @@ packages/ui/
 
 1. Import the component:
 ```tsx
-import { Button } from "@acme/ui/button"
+import { Button } from "@arya.sh/ui/button"
 ```
 
 2. Use it in your React application:

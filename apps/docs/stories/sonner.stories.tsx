@@ -1,7 +1,7 @@
 import React from "react"
 import type { Meta, StoryObj } from "@storybook/react"
-import { Toaster } from "@acme/ui/components/primitives/sonner"
-import { Button } from "@acme/ui/components/primitives/button"
+import { Toaster } from "@arya.sh/ui/components/primitives/sonner"
+import { Button } from "@arya.sh/ui/components/primitives/button"
 import { toast, type ToasterProps } from "sonner"
 import { CheckCircle2, AlertCircle, Info, AlertTriangle } from "lucide-react"
 
